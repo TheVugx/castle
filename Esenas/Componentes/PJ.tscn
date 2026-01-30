@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bldv21egqvswk"]
+
+[ext_resource type="Script" uid="uid://bgaj2mhbwqh32" path="res://Scripts/pj.gd" id="1_gxmbu"]
+[ext_resource type="Texture2D" uid="uid://btmfsmcldsamc" path="res://Assets/Spritesheet.png" id="1_xff2p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gxmbu"]
+size = Vector2(7, 13)
+
+[node name="Pj" type="CharacterBody2D"]
+script = ExtResource("1_gxmbu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_xff2p")
+region_enabled = true
+region_rect = Rect2(18, 17, 12, 15)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 1)
+shape = SubResource("RectangleShape2D_gxmbu")
