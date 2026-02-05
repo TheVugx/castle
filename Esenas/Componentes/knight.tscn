@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://bldv21egqvswk"]
 
-[ext_resource type="Script" uid="uid://bgaj2mhbwqh32" path="res://Scripts/pj.gd" id="1_5suxn"]
+[ext_resource type="Script" uid="uid://bgaj2mhbwqh32" path="res://Scripts/knight.gd" id="1_5suxn"]
 [ext_resource type="Texture2D" uid="uid://chxmxr8ni3hjs" path="res://Assets/Knight/Knight Idle-Sheet 16x16.png" id="2_8p54a"]
 [ext_resource type="Texture2D" uid="uid://cfv0ytcmjhu82" path="res://Assets/Knight/Knight Walk-Sheet 16x16.png" id="3_ggciv"]
 [ext_resource type="Texture2D" uid="uid://t5ctlp4qgnfg" path="res://Assets/Knight/Knight Power UP-Sheet 16x16.png" id="4_xenix"]
