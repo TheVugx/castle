@@ -28,6 +28,7 @@ func handle_jump() -> void:
 	if is_on_floor():
 		is_jumping = false
 
+
 		if Input.is_action_just_pressed("ui_accept"):
 			velocity.y = -jump_force
 			is_jumping = true
