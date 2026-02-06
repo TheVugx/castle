@@ -7,10 +7,7 @@ func _physics_process(delta: float) -> void:
 		x -= 1
 	if Input.is_key_pressed(KEY_RIGHT):
 		x += 1
-	if Input.is_key_pressed(KEY_UP):
-		y -= 1
-	if Input.is_key_pressed(KEY_DOWN):
-		y += 1
+
 
 	var input_direction := Vector2(x, y).normalized()
 	velocity = input_direction * 200
