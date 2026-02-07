@@ -1,0 +1,37 @@
+Godot 4.4.1
+
+Solo vugx toca configuraciones del proyecto
+
+--Convenciones de Git:
+
+-Ramas:
+
+Crear una rama siempre que queramos una nueva funcion
+
+fix/ -> arreglos de bugs
+feature/.. -> agregar funcion
+refactor/.. -> ordenar sin cambiar comportamiento
+move/.. -> mover archivos / clases
+config/.. -> mover una config. de godot
+add/.. -> agregar assets
+
+-Commits:
+Comentarios en español
+
+fix/ -> arreglos de bugs
+feature/.. -> agregar funcion
+refactor/.. -> ordenar sin cambiar comportamiento
+move/.. -> mover archivos / clases
+config/.. -> mover una config. de godot
+add/.. -> agregar assets
+
+
+-flujo de trabajo en GIT: 
+Crear una rama de la funcion a programar
+Trabajar en ella
+Al estar listar avisar a vugx y el se encargar del merge a main
+
+-Organizacion de proyecto Godot
+
+Orientado a Objetos por componente
+
