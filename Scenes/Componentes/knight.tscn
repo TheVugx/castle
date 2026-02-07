@@ -278,6 +278,7 @@ _data = {
 }
 
 [node name="knight" type="CharacterBody2D"]
+scale = Vector2(2, 2)
 script = ExtResource("1_5suxn")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
