@@ -2,13 +2,18 @@ extends CharacterBody2D
 
 @onready var sprite := $Sprite2D
 @onready var timer := $Timer
+@onready var animationPlayer = $AnimationPlayer
 var direction = 1
 
 func _ready():
 	timer.wait_time = 0.6
 	timer.start()
+	
+func update_state() -> void:
+	animationPlayer.play("idle")
 
 func _physics_process(delta):
+	update_state()
 	if direction == 1:
 		sprite.flip_h = false
 	elif direction == -1:

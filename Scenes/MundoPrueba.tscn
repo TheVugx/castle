@@ -15,5 +15,5 @@ tile_set = ExtResource("1_47gtk")
 position = Vector2(49, 19)
 
 [node name="Mago" parent="." instance=ExtResource("3_sotc0")]
-position = Vector2(541, 188)
+position = Vector2(541, 179)
 scale = Vector2(2, 2)

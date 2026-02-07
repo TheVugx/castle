@@ -54,7 +54,7 @@ tile_map_data = PackedByteArray("AAAkAAkAAAABAAMAAAAlAAkAAAABAAMAAAAmAAkAAAABAAM
 tile_set = SubResource("TileSet_w1sfw")
 
 [node name="Mago" parent="." instance=ExtResource("2_bbfof")]
-position = Vector2(592, 124)
+position = Vector2(592, 115)
 scale = Vector2(2, 2)
 
 [node name="knight" parent="." instance=ExtResource("3_hdvyq")]
