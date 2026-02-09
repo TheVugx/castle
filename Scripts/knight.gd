@@ -9,6 +9,8 @@ var is_jumping: bool = false
 #importaciones
 @onready var animationPlayer = $AnimationPlayer
 @onready var sprite = $Sprite2D
+@onready var manoI = $ManoI
+@onready var manoD = $ManoD
 
 func _physics_process(delta: float) -> void:
 	apply_gravity(delta)
@@ -23,9 +25,10 @@ func handle_movement() -> void:
 	direction = Input.get_axis("ui_left", "ui_right")
 	velocity.x = direction * move_speed
 	if direction == -1:
-		sprite.flip_h = false
+		scale.x = -1
 	elif direction == 1:
-		sprite.flip_h = true
+		scale.x = 1
+
 
 func handle_jump() -> void:
 	# Solo puede saltar si está en el suelo
