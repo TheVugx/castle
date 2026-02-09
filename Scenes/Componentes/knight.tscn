@@ -1,9 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://bldv21egqvswk"]
+[gd_scene load_steps=14 format=3 uid="uid://bldv21egqvswk"]
 
 [ext_resource type="Script" uid="uid://bgaj2mhbwqh32" path="res://Scripts/knight.gd" id="1_5suxn"]
 [ext_resource type="Texture2D" uid="uid://chxmxr8ni3hjs" path="res://Assets/Knight/Knight Idle-Sheet 16x16.png" id="2_8p54a"]
 [ext_resource type="Texture2D" uid="uid://btmfsmcldsamc" path="res://Assets/Spritesheet.png" id="2_823gs"]
 [ext_resource type="Texture2D" uid="uid://cfv0ytcmjhu82" path="res://Assets/Knight/Knight Walk-Sheet 16x16.png" id="3_ggciv"]
+[ext_resource type="Texture2D" uid="uid://ydylulehbtpu" path="res://Assets/Knight/Knight Jump-Sheet 16x16.png" id="4_7nppm"]
 [ext_resource type="Texture2D" uid="uid://t5ctlp4qgnfg" path="res://Assets/Knight/Knight Power UP-Sheet 16x16.png" id="4_xenix"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gxmbu"]
@@ -163,6 +164,7 @@ tracks/5/keys = {
 
 [sub_resource type="Animation" id="Animation_gxmbu"]
 resource_name = "jump"
+length = 0.52
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -173,7 +175,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("2_8p54a")]
+"values": [ExtResource("4_7nppm")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -185,7 +187,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [4]
+"values": [6]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -206,10 +208,34 @@ tracks/3/path = NodePath("Sprite2D:frame")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [0, 1, 2, 3]
+"values": [0, 1, 2, 3, 4, 5]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ManoI:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(300, 300, 300, 300, 300, 300),
+"update": 0,
+"values": [Vector2(-4.5, 4), Vector2(-4.5, 5), Vector2(-4.5, 2), Vector2(-4.5, 4), Vector2(-4.5, 4), Vector2(-4.5, 5)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("ManoD:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(300, 300, 300, 300, 300, 300),
+"update": 0,
+"values": [Vector2(2, 4), Vector2(2, 5), Vector2(2, 2), Vector2(2, 4), Vector2(2, 4), Vector2(2, 5)]
 }
 
 [sub_resource type="Animation" id="Animation_tsnd6"]
@@ -327,6 +353,7 @@ _data = {
 }
 
 [node name="knight" type="CharacterBody2D"]
+scale = Vector2(2, 2)
 script = ExtResource("1_5suxn")
 
 [node name="ManoI" type="Sprite2D" parent="."]
