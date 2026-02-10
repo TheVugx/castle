@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bldv21egqvswk"]
+[gd_scene load_steps=16 format=3 uid="uid://bldv21egqvswk"]
 
 [ext_resource type="Script" uid="uid://bgaj2mhbwqh32" path="res://Scripts/knight.gd" id="1_5suxn"]
 [ext_resource type="Texture2D" uid="uid://chxmxr8ni3hjs" path="res://Assets/Knight/Knight Idle-Sheet 16x16.png" id="2_8p54a"]
@@ -15,7 +15,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/path = NodePath("Visuals/Sprite2D:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -27,7 +27,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:hframes")
+tracks/1/path = NodePath("Visuals/Sprite2D:hframes")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -39,7 +39,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Sprite2D:vframes")
+tracks/2/path = NodePath("Visuals/Sprite2D:vframes")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -51,7 +51,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Sprite2D:frame")
+tracks/3/path = NodePath("Visuals/Sprite2D:frame")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -63,7 +63,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("ManoI:position")
+tracks/4/path = NodePath("Visuals/ManoI:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -75,7 +75,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("ManoD:position")
+tracks/5/path = NodePath("Visuals/ManoD:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -83,6 +83,18 @@ tracks/5/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(2, 3.5)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Visuals/ManoI:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
 }
 
 [sub_resource type="Animation" id="Animation_ckktm"]
@@ -92,7 +104,7 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/path = NodePath("Visuals/Sprite2D:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -104,7 +116,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:hframes")
+tracks/1/path = NodePath("Visuals/Sprite2D:hframes")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -116,7 +128,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Sprite2D:vframes")
+tracks/2/path = NodePath("Visuals/Sprite2D:vframes")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -128,7 +140,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Sprite2D:frame")
+tracks/3/path = NodePath("Visuals/Sprite2D:frame")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -140,7 +152,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("ManoI:position")
+tracks/4/path = NodePath("Visuals/ManoI:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -152,7 +164,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("ManoD:position")
+tracks/5/path = NodePath("Visuals/ManoD:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -168,7 +180,7 @@ length = 0.52
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/path = NodePath("Visuals/Sprite2D:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -180,7 +192,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:hframes")
+tracks/1/path = NodePath("Visuals/Sprite2D:hframes")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -192,7 +204,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Sprite2D:vframes")
+tracks/2/path = NodePath("Visuals/Sprite2D:vframes")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -204,7 +216,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Sprite2D:frame")
+tracks/3/path = NodePath("Visuals/Sprite2D:frame")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -216,35 +228,35 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("ManoI:position")
+tracks/4/path = NodePath("Visuals/ManoI:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
 "transitions": PackedFloat32Array(300, 300, 300, 300, 300, 300),
 "update": 0,
-"values": [Vector2(-4.5, 4), Vector2(-4.5, 5), Vector2(-4.5, 2), Vector2(-4.5, 4), Vector2(-4.5, 4), Vector2(-4.5, 5)]
+"values": [Vector2(-4.5, 4), Vector2(-4.5, 6), Vector2(-4.5, 0), Vector2(-4.5, 4), Vector2(-4.5, 4), Vector2(-4.5, 6)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("ManoD:position")
+tracks/5/path = NodePath("Visuals/ManoD:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
 "transitions": PackedFloat32Array(300, 300, 300, 300, 300, 300),
 "update": 0,
-"values": [Vector2(2, 4), Vector2(2, 5), Vector2(2, 2), Vector2(2, 4), Vector2(2, 4), Vector2(2, 5)]
+"values": [Vector2(2, 4), Vector2(2, 6), Vector2(2, 0), Vector2(2, 4), Vector2(2, 4), Vector2(2, 6)]
 }
 
 [sub_resource type="Animation" id="Animation_tsnd6"]
 resource_name = "power-up"
-length = 0.8317
+length = 0.73
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/path = NodePath("Visuals/Sprite2D:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -256,7 +268,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:hframes")
+tracks/1/path = NodePath("Visuals/Sprite2D:hframes")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -268,7 +280,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Sprite2D:vframes")
+tracks/2/path = NodePath("Visuals/Sprite2D:vframes")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -280,14 +292,14 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Sprite2D:frame")
+tracks/3/path = NodePath("Visuals/Sprite2D:frame")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [0, 1, 2, 3, 4, 5, 6, 7, 7]
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
 }
 
 [sub_resource type="Animation" id="Animation_vnnr5"]
@@ -297,7 +309,7 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/path = NodePath("Visuals/Sprite2D:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -309,7 +321,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:hframes")
+tracks/1/path = NodePath("Visuals/Sprite2D:hframes")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -321,7 +333,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Sprite2D:vframes")
+tracks/2/path = NodePath("Visuals/Sprite2D:vframes")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -333,7 +345,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Sprite2D:frame")
+tracks/3/path = NodePath("Visuals/Sprite2D:frame")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -342,10 +354,79 @@ tracks/3/keys = {
 "update": 1,
 "values": [0, 1, 2, 3]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Visuals/ManoI:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(300, 300, 300, 300),
+"update": 0,
+"values": [Vector2(-4.5, 4), Vector2(-4.5, 4), Vector2(-4.5, 2), Vector2(-4.5, 4)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Visuals/ManoD:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(300, 300, 300, 300),
+"update": 0,
+"values": [Vector2(2, 3), Vector2(2, 4), Vector2(2, 3), Vector2(2, 4)]
+}
+
+[sub_resource type="Animation" id="Animation_7nppm"]
+resource_name = "hit1"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Visuals/ManoI:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.3, 0.4),
+"transitions": PackedFloat32Array(300, 300, 300, 300),
+"update": 0,
+"values": [Vector2(-4.5, 4), Vector2(-8, -6.5), Vector2(-14, 4), Vector2(-4.5, 4)]
+}
+
+[sub_resource type="Animation" id="Animation_3fs12"]
+resource_name = "hit2"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Visuals/ManoI:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.2, 0.25, 0.3),
+"transitions": PackedFloat32Array(300, 300, 300, 300, 300),
+"update": 0,
+"values": [Vector2(-4.5, 4), Vector2(-5, 4), Vector2(-7, 4), Vector2(-7, 4), Vector2(-4.5, 4)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Visuals/ManoI:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.3),
+"transitions": PackedFloat32Array(300, 300, 300),
+"update": 0,
+"values": [0.0, -1.5708, 0.0]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_tcsg0"]
 _data = {
 &"RESET": SubResource("Animation_oto2n"),
+&"hit1": SubResource("Animation_7nppm"),
+&"hit2": SubResource("Animation_3fs12"),
 &"idle": SubResource("Animation_ckktm"),
 &"jump": SubResource("Animation_gxmbu"),
 &"power-up": SubResource("Animation_tsnd6"),
@@ -355,26 +436,6 @@ _data = {
 [node name="knight" type="CharacterBody2D"]
 scale = Vector2(2, 2)
 script = ExtResource("1_5suxn")
-
-[node name="ManoI" type="Sprite2D" parent="."]
-texture_filter = 1
-position = Vector2(-4.5, 3)
-texture = ExtResource("2_823gs")
-region_enabled = true
-region_rect = Rect2(17, 6, 4, 4)
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture_filter = 1
-texture = ExtResource("2_8p54a")
-hframes = 4
-region_rect = Rect2(18, 17, 12, 15)
-
-[node name="ManoD" type="Sprite2D" parent="."]
-texture_filter = 1
-position = Vector2(2, 3.5)
-texture = ExtResource("2_823gs")
-region_enabled = true
-region_rect = Rect2(17, 6, 4, 4)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
@@ -388,5 +449,32 @@ libraries = {
 autoplay = "idle"
 
 [node name="Camera2D" type="Camera2D" parent="."]
-scale = Vector2(2, 2)
-zoom = Vector2(2, 2)
+zoom = Vector2(4, 4)
+
+[node name="Visuals" type="Node2D" parent="."]
+
+[node name="ManoI" type="Sprite2D" parent="Visuals"]
+texture_filter = 1
+position = Vector2(-4.5, 3)
+texture = ExtResource("2_823gs")
+region_enabled = true
+region_rect = Rect2(17, 6, 4, 4)
+
+[node name="Espada" type="Sprite2D" parent="Visuals/ManoI"]
+position = Vector2(-0.5, -5)
+texture = ExtResource("2_823gs")
+region_enabled = true
+region_rect = Rect2(54, 2, 5, 12)
+
+[node name="Sprite2D" type="Sprite2D" parent="Visuals"]
+texture_filter = 1
+texture = ExtResource("2_8p54a")
+hframes = 4
+region_rect = Rect2(18, 17, 12, 15)
+
+[node name="ManoD" type="Sprite2D" parent="Visuals"]
+texture_filter = 1
+position = Vector2(2, 3.5)
+texture = ExtResource("2_823gs")
+region_enabled = true
+region_rect = Rect2(17, 6, 4, 4)

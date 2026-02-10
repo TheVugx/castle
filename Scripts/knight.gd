@@ -1,13 +1,14 @@
 extends CharacterBody2D
 #constantes del personaje 
 @export var move_speed: float = 200.0
-@export var jump_force: float = 650 #420.0
+@export var jump_force: float = 400.0
 @export var gravity: float = 1200.0
 #variables del personaje 
 var direction: float = 0.0
 var is_jumping: bool = false
 #importaciones
 @onready var animationPlayer = $AnimationPlayer
+@onready var visuals = $Visuals
 @onready var sprite = $Sprite2D
 @onready var manoI = $ManoI
 @onready var manoD = $ManoD
@@ -19,16 +20,12 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	update_state()
 
-
 func handle_movement() -> void:
-	# Captura input horizontal (A/D o ←/→)
 	direction = Input.get_axis("ui_left", "ui_right")
 	velocity.x = direction * move_speed
-	if direction == -1:
-		scale.x = -1
-	elif direction == 1:
-		scale.x = 1
 
+	if direction != 0:
+		visuals.scale.x = sign(-direction)
 
 func handle_jump() -> void:
 	# Solo puede saltar si está en el suelo
