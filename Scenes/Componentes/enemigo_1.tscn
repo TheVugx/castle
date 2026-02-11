@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://btvujuo5gv077"]
+[gd_scene load_steps=18 format=3 uid="uid://btvujuo5gv077"]
 
 [ext_resource type="Script" uid="uid://43g6eh6tb4y8" path="res://Scripts/enemigo_1.gd" id="1_hmplp"]
 [ext_resource type="Texture2D" uid="uid://biuut50chpt1h" path="res://Assets/Enemy/Enemy Idle-Sheet 16x16.png" id="2_hmplp"]
@@ -388,6 +388,12 @@ _data = {
 &"walk2": SubResource("Animation_h1tx3")
 }
 
+[sub_resource type="Curve2D" id="Curve2D_f0avk"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1032, 431, 0, 0, 0, 0, 733, 431, 0, 0, 0, 0, 702, 431, 0, 0, 0, 0, 651, 387, 0, 0, 0, 0, 633, 429, 0, 0, 0, 0, 583, 429, 0, 0, 0, 0, 530, 367, 0, 0, 0, 0, 449, 429, 0, 0, 0, 0, 403, 428, 0, 0, 0, 0, 333, 431, 0, 0, 0, 0, 372, 319, 0, 0, 0, 0, 414, 283, 0, 0, 0, 0, 454, 281, 0, 0, 0, 0, 483, 210, 0, 0, 0, 0, 505, 155, 0, 0, 0, 0, 546, 166, 0, 0, 0, 0, 592, 171, 0, 0, 0, 0, 638, 172, 0, 0, 0, 0, 658, 171, 0, 0, 0, 0, 631, 61, 0, 0, 0, 0, 568, 61, 0, 0, 0, 0, 484, 62, 0, 0, 0, 0, 409, 59, 0, 0, 0, 0, 368, 58)
+}
+point_count = 24
+
 [node name="Enemigo1" type="CharacterBody2D"]
 script = ExtResource("1_hmplp")
 
@@ -405,3 +411,6 @@ libraries = {
 &"": SubResource("AnimationLibrary_elisk")
 }
 autoplay = "idle"
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_f0avk")

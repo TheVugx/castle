@@ -277,7 +277,7 @@ _data = {
 &"walk": SubResource("Animation_vnnr5")
 }
 
-[node name="knight" type="CharacterBody2D"]
+[node name="knight" type="CharacterBody2D" groups=["Knight"]]
 scale = Vector2(2, 2)
 script = ExtResource("1_5suxn")
 
@@ -296,6 +296,3 @@ libraries = {
 &"": SubResource("AnimationLibrary_tcsg0")
 }
 autoplay = "idle"
-
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(2, 2)
