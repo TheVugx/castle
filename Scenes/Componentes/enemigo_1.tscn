@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://btvujuo5gv077"]
+[gd_scene load_steps=18 format=3 uid="uid://btvujuo5gv077"]
 
 [ext_resource type="Script" uid="uid://43g6eh6tb4y8" path="res://Scripts/enemigo_1.gd" id="1_hmplp"]
 [ext_resource type="Texture2D" uid="uid://biuut50chpt1h" path="res://Assets/Enemy/Enemy Idle-Sheet 16x16.png" id="2_hmplp"]
@@ -388,6 +388,9 @@ _data = {
 &"walk2": SubResource("Animation_h1tx3")
 }
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_f0avk"]
+radius = 149.054
+
 [node name="Enemigo1" type="CharacterBody2D"]
 script = ExtResource("1_hmplp")
 
@@ -405,3 +408,18 @@ libraries = {
 &"": SubResource("AnimationLibrary_elisk")
 }
 autoplay = "idle"
+
+[node name="PlayerDetector" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetector"]
+shape = SubResource("CircleShape2D_f0avk")
+
+[node name="RayWallD" type="RayCast2D" parent="."]
+target_position = Vector2(16, 0)
+
+[node name="RayWallI" type="RayCast2D" parent="."]
+target_position = Vector2(-16, 0)
+
+[node name="RayClimbCheck" type="RayCast2D" parent="."]
+position = Vector2(5, 0)
+target_position = Vector2(0, -120)
