@@ -62,3 +62,7 @@ func update_state() -> void:
 		else:
 			animationPlayer.play("idle")
 			pass
+
+
+func _on_area_bird_area_entered(area: Area2D) -> void:
+	pass # Replace with function body.
