@@ -7,7 +7,7 @@ class_name BirdEnemy
 @export var dive_duration := 1.2
 @export var dive_depth := 30.0
 @export var dive_cooldown := 2.0
-@export var return_speed := 140.0
+@export var return_speed := 100.0
 @export var bank_strength := 0.12
 
 # ==============================
@@ -32,15 +32,9 @@ var attack_active := false
 # attack direction memory
 var last_attack_dir := Vector2.ZERO
 
-# ==============================
-# READY
-# ==============================
 func _ready():
 	home_position = global_position
 
-# ==============================
-# PROCESS
-# ==============================
 func _physics_process(delta):
 	if cooldown_timer > 0.0:
 		cooldown_timer -= delta
@@ -49,32 +43,29 @@ func _physics_process(delta):
 
 	match state:
 		State.IDLE:
-			print("idle")
+			#print("idle")
 			pass
 
 		State.LOCK:
-			print("lock")
+			#print("lock")
 			lock_target()
 
 		State.DIVE:
-			print("dive")
+			#print("dive")
 			dive_behavior(delta)
 
 		State.AT_SUCCESS:
-			print("success")
-			pass
+			#print("success")
+			end_dive()
 
 		State.AT_FAILURE:
-			print("failure")
+			#print("failure")
 			pass
 
 		State.RETURN:
 			print("return")
 			return_home(delta)
 
-# ==============================
-# EXTERNAL API
-# ==============================
 func set_target(t: Node2D):
 	target = t
 	can_attack = true
@@ -85,19 +76,17 @@ func set_idle():
 	can_attack = false
 	state = State.IDLE
 
-# ==============================
-# LOGIC
-# ==============================
 func lock_target():
-	if target == null:
-		state = State.IDLE
-		return
+#	if target == null:
+#		print("target is NULL")
+#		 state = State.IDLE
+# 	 	return
 	start_dive()
 
 func start_dive():
-	if not can_attack or target == null:
-		state = State.IDLE
-		return
+#	if not can_attack or target == null:
+#		state = State.IDLE
+#		return
 
 	can_attack = false
 	cooldown_timer = dive_cooldown
@@ -122,26 +111,24 @@ func dive_behavior(delta):
 		last_attack_dir = motion.normalized()
 		
 	var collision = move_and_collide(motion)
-	
-	if collision and attack_active:
+	if collision: # and attack_active:
 		var collider = collision.get_collider()
 		if collider and collider.is_in_group("player"):
 			print("HIT PLAYER DURING DIVE")
-			on_hit_player(collider)
+			state = State.AT_SUCCESS
+#			on_hit_player(collider)
 
-	
-	if motion.length() > 0.001:
-		rotation = lerp_angle(rotation, motion.angle(), bank_strength)
+	#if motion.length() > 0.001:
+	#	rotation = lerp_angle(rotation, motion.angle(), bank_strength)
+	#	attack_active = (t > 0.35 and t < 0.65)
 
-		attack_active = (t > 0.35 and t < 0.65)
+	#if t >= 1.0:
+	#	end_dive()
 
-	if t >= 1.0:
-		end_dive()
-
-func on_hit_player(player):
-	if player.has_method("take_damage"):
-		player.take_damage(10)
-	state = State.AT_SUCCESS
+#func on_hit_player(player):
+#	if player.has_method("take_damage"):
+#		player.take_damage(10)
+#	state = State.AT_SUCCESS
 
 
 func end_dive():
@@ -167,10 +154,8 @@ func end_dive():
 
 		global_position = new_pos
 
-	state = State.AT_SUCCESS
-# ==============================
-# RETURN
-# ==============================
+	state = State.LOCK
+
 func return_home(delta):
 	var dir = home_position - global_position
 	if dir.length() < 5.0:
@@ -183,9 +168,6 @@ func return_home(delta):
 	velocity = dir.normalized() * return_speed
 	move_and_slide()
 
-# ==============================
-# MATH
-# ==============================
 func bezier(p0: Vector2, p1: Vector2, p2: Vector2, t: float) -> Vector2:
 	var u = 1.0 - t
 	return u * u * p0 + 2 * u * t * p1 + t * t * p2
