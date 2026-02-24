@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://btvujuo5gv077"]
+[gd_scene load_steps=18 format=3 uid="uid://btvujuo5gv077"]
 
 [ext_resource type="Script" uid="uid://43g6eh6tb4y8" path="res://Scripts/enemigo_1.gd" id="1_hmplp"]
 [ext_resource type="Texture2D" uid="uid://biuut50chpt1h" path="res://Assets/Enemy/Enemy Idle-Sheet 16x16.png" id="2_hmplp"]
@@ -388,6 +388,12 @@ _data = {
 &"walk2": SubResource("Animation_h1tx3")
 }
 
+[sub_resource type="Curve2D" id="Curve2D_f0avk"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1081, 581, 0, 0, 0, 0, 904, 582, 0, 0, 0, 0, 775, 580, 0, 0, 0, 0, 776, 379, 0, 0, 0, 0, 825, 351, 0, 0, 0, 0, 880, 392, 0, 0, 0, 0, 755, 280, 0, 0, 0, 0, 720, 334, 0, 0, 0, 0, 712, 216, 0, 0, 0, 0, 941, 262, 0, 0, 0, 0, 700, 117, 0, 0, 0, 0, 632, 176)
+}
+point_count = 12
+
 [node name="Enemigo1" type="CharacterBody2D"]
 script = ExtResource("1_hmplp")
 
@@ -405,3 +411,6 @@ libraries = {
 &"": SubResource("AnimationLibrary_elisk")
 }
 autoplay = "idle"
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_f0avk")
