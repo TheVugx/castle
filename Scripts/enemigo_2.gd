@@ -8,7 +8,7 @@ extends CharacterBody2D
 @export var path_x_gain := 6.0
 @export var max_fall_speed := 2000.0
 
-@onready var path : Curve2D = $Path2D.curve
+@onready var path : Curve2D = $PathEnemy2.curve
 
 var distance := 0.0
 

@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://ca5g3b71hge5x"]
+
+[ext_resource type="Texture2D" uid="uid://cjwojkoxt516y" path="res://Assets/Enemy/Enemy2t.png" id="2_3lplm"]
+[ext_resource type="Script" uid="uid://b5lahm617qpp" path="res://Scripts/enemigo_2.gd" id="2_augcb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7lihs"]
+size = Vector2(10, 17)
+
+[sub_resource type="Curve2D" id="Curve2D_fgofq"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 85, 627, 0, 0, 0, 0, 403, 617, 0, 0, 0, 0, 398, 437, 0, 0, 0, 0, 396, 389, 0, 0, 0, 0, 393, 368, 0, 0, 0, 0, 345, 413, 0, 0, 0, 0, 383, 320, 0, 0, 0, 0, 430, 291, 0, 0, 0, 0, 463, 323, 0, 0, 0, 0, 495, 307, 0, 0, 0, 0, 528, 286, 0, 0, 0, 0, 565, 294, 0, 0, 0, 0, 570, 336, 0, 0, 0, 0, 629, 284, 0, 0, 0, 0, 707, 242, 0, 0, 0, 0, 764, 240, 0, 0, 0, 0, 756, 149, 0, 0, 0, 0, 720, 138, 0, 0, 0, 0, 686, 177, 0, 0, 0, 0, 588, 175)
+}
+point_count = 20
+
+[node name="Enemigo2" type="CharacterBody2D"]
+script = ExtResource("2_augcb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_3lplm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -2)
+shape = SubResource("RectangleShape2D_7lihs")
+
+[node name="PathEnemy2" type="Path2D" parent="."]
+curve = SubResource("Curve2D_fgofq")

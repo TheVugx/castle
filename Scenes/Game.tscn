@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dci3qv4htcfmu" path="res://Assets/Tileset_Castle_16x16.png" id="1_iukft"]
 [ext_resource type="PackedScene" uid="uid://cb42myal8ixoh" path="res://Scenes/Componentes/Mago.tscn" id="4_7lihs"]
 [ext_resource type="PackedScene" uid="uid://btvujuo5gv077" path="res://Scenes/Componentes/enemigo_1.tscn" id="4_kldst"]
-[ext_resource type="PackedScene" uid="uid://ca5g3b71hge5x" path="res://Scenes/enemigo_2.tscn" id="5_b2bpf"]
+[ext_resource type="PackedScene" uid="uid://ca5g3b71hge5x" path="res://Scenes/Componentes/enemigo_2.tscn" id="5_b2bpf"]
 [ext_resource type="PackedScene" uid="uid://bldv21egqvswk" path="res://Scenes/Componentes/knight.tscn" id="5_fgofq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kldst"]
@@ -94,8 +94,6 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_kldst")
 
 [node name="Game" type="Node2D" groups=["player"]]
-metadata/_edit_lock_ = true
-metadata/_edit_group_ = true
 
 [node name="Visuals" type="Node2D" parent="."]
 
@@ -121,3 +119,4 @@ position = Vector2(581, 159)
 position = Vector2(1068, 528)
 
 [node name="Enemigo2" parent="." instance=ExtResource("5_b2bpf")]
+position = Vector2(121, 528)
