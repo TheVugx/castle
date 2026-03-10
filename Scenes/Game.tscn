@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=4 uid="uid://dmoge6wfx060v"]
+[gd_scene load_steps=9 format=4 uid="uid://dmoge6wfx060v"]
 
 [ext_resource type="Texture2D" uid="uid://dci3qv4htcfmu" path="res://Assets/Tileset_Castle_16x16.png" id="1_iukft"]
 [ext_resource type="PackedScene" uid="uid://cb42myal8ixoh" path="res://Scenes/Componentes/Mago.tscn" id="4_7lihs"]
 [ext_resource type="PackedScene" uid="uid://btvujuo5gv077" path="res://Scenes/Componentes/enemigo_1.tscn" id="4_kldst"]
 [ext_resource type="PackedScene" uid="uid://ca5g3b71hge5x" path="res://Scenes/Componentes/enemigo_2.tscn" id="5_b2bpf"]
 [ext_resource type="PackedScene" uid="uid://bldv21egqvswk" path="res://Scenes/Componentes/knight.tscn" id="5_fgofq"]
+[ext_resource type="PackedScene" uid="uid://edaqcrruslqg" path="res://Scenes/Componentes/entity_spawner.tscn" id="6_7lihs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kldst"]
 texture = ExtResource("1_iukft")
@@ -120,3 +121,27 @@ position = Vector2(1068, 528)
 
 [node name="Enemigo2" parent="." instance=ExtResource("5_b2bpf")]
 position = Vector2(121, 528)
+
+[node name="EntitySpawner" parent="." instance=ExtResource("6_7lihs")]
+
+[node name="Marker2D" type="Marker2D" parent="EntitySpawner/Positions" index="0"]
+
+[node name="Marker2D2" type="Marker2D" parent="EntitySpawner/Positions" index="1"]
+
+[node name="Marker2D3" type="Marker2D" parent="EntitySpawner/Positions" index="2"]
+
+[node name="Marker2D4" type="Marker2D" parent="EntitySpawner/Positions" index="3"]
+
+[node name="Marker2D5" type="Marker2D" parent="EntitySpawner/Positions" index="4"]
+
+[node name="Marker2D6" type="Marker2D" parent="EntitySpawner/Positions" index="5"]
+
+[node name="Marker2D7" type="Marker2D" parent="EntitySpawner/Positions" index="6"]
+
+[node name="Marker2D8" type="Marker2D" parent="EntitySpawner/Positions" index="7"]
+
+[node name="Marker2D9" type="Marker2D" parent="EntitySpawner/Positions" index="8"]
+
+[node name="Marker2D10" type="Marker2D" parent="EntitySpawner/Positions" index="9"]
+
+[editable path="EntitySpawner"]
